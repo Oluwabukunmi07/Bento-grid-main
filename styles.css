@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: hsl(218, 44%, 93%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(50px, auto);
+    padding: 2rem;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: 
+    "media"
+    "account"
+    "schedule"
+    "social"
+    "followers"
+    "audience"
+    "schedule-content"
+    "content";
+}
+
+.box {
+    max-width: 368px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.7rem;
+    padding: 1.3rem;
+    gap: 15px;
+}
+
+
+.media, .followers {
+    color: hsl(0, 0%, 100%);
+}
+
+h3 {
+    font-size: 25px;
+    line-height: 1.5rem;
+}
+
+h1, h2, h3 {
+    font-weight: 500;
+}
+
+.break {
+    display: none;
+}
+
+p {
+    font-size: 18px;
+    text-align: center;
+}
+
+/* SOCIAL MEDIA  */
+
+.media {
+    background: hsl(256, 67%, 59%);
+    grid-area: media;
+    height: 280px;
+    gap: 20px;
+}
+
+.media h1 {
+    text-align: center;
+    font-size: 50px;
+    line-height: 2.7rem;
+}
+
+.review {
+    gap: 10px;
+}
+
+.faster {
+    color: hsl(0, 0%, 100%);
+    font-style: italic;
+}
+
+span {
+    color: hsl(39, 100%, 71%);
+}
+
+.star {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* MULTIPLE ACCOUNTS */
+.accounts {
+    grid-area: account;
+    background: hsl(0, 0%, 100%);
+    height: auto;
+}
+
+.platforms {
+    width: 350px;
+}
+
+
+/* SCHEDULE POSTING */
+.schedule {
+    grid-area: schedule;
+    background: hsl(39, 100%, 71%);
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+    height: 230px;
+    padding: 1rem;
+}
+
+.schedule h3 {
+    margin-top: 30px;
+}
+
+.schedule-post {
+    width: 68%;
+    position: relative;
+    top: 10px;
+}
+
+
+/* SOCIAL SCHEDULE */
+.social {
+    grid-area: social;
+    background: hsl(254, 88%, 90%);
+    gap: 20px;
+}
+
+.time-post {
+    width: 100%;
+}
+
+
+/* FOLLOWER GROWTH */
+.followers {
+    grid-area: followers;
+    background: hsl(256, 67%, 59%);
+}
+
+.followers>.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.followers h3 {
+    text-align: center;
+}
+
+.follow {
+    width: 80%;
+}
+
+/* AUDIENCE */
+.audience {
+    grid-area: audience;
+    background: hsl(0, 0%, 100%);
+    display: flex;
+    align-items: start;
+}
+
+.audience h2 {
+    font-size: 50px;
+}
+
+.audience>p {
+    text-align: left;
+    font-size: 18px;
+}
+
+.audience-growth {
+    width: 60%;
+}
+
+/* CREAT AND SCHEDULE CONTENT */
+.schedule-content {
+    grid-area: schedule-content;
+    background: hsl(31, 66%, 93%);
+}
+
+.schedule-content h3 {
+    font-size: 27px;
+}
+
+.post {
+    width: 50%;
+}
+
+.quick {
+    font-style: italic;
+    color: hsl(256, 67%, 59%);
+}
+
+/* WRITW CONTENT USING AI */
+.content {
+    grid-area: content;
+    background: hsl(39, 100%, 71%);
+}
+
+.content h2 {
+    font-size: 30px;
+}
+
+.ai {
+    width: 70%;
+}
+
+@media screen and (min-width: 1440px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-auto-rows: minmax(50px, auto);
+        padding: 2rem;
+        max-width: 1300px;
+        height: 100vh;
+        gap: 25px;
+        justify-content: center;
+        align-items: center;
+        grid-template-areas: 
+        "schedule-content media media social"
+        "schedule-content account schedule social"
+        "content audience followers followers"
+        ;
+    }
+
+    .box {
+        max-width: 1040px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.7rem;
+        padding: 1.3rem;
+        gap: 15px;
+    }
+
+    h3 {
+        font-size: 35px;
+        line-height: 2rem;
+    }
+
+    /* MEDIA */
+    .media {
+        grid-area: media;
+        height: 280px;
+        gap: 20px;
+        height: 100%;
+        margin-top: 20px;
+    }
+
+    .break{
+        display: block;
+    }
+
+    .media h1 {
+        font-size: 50px;
+    }
+    
+    /* SCHEDULE-CONTENT */
+    .schedule-content {
+        height: 440px;
+        margin-bottom: 152px;
+    }   
+
+    .schedule-content h3 {
+        font-size: 40px;
+        line-height: 2.5rem;
+    }
+
+    .post {
+        width: 90%;
+    }
+
+    /* CONTENT */
+    .content {
+        height: 440px;
+        margin-top: -180px;
+        gap: 2rem;
+    }
+
+    .content h2 {
+        font-size: 40px;
+        line-height: 2.5rem;
+    }
+
+    .ai {
+        width: 100%;
+    }
+    
+
+    /* FOLLOWERS */
+    .followers {
+        height: 90%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .follow {
+        width: 90%;
+    }
+
+    .followers>.img {
+        display: flex;
+        width: 50%;
+        float: left;
+    }
+
+    .followers h3 {
+        text-align: left;
+    }
+
+    /* ACCOUUNTS */
+    .accounts {
+        height: 92%;
+        display: flex;
+        overflow: hidden;
+        margin-top: 20px;
+    }
+
+    .platforms {
+        width: 145%;
+    }
+
+
+    /* SCHEDULE */
+    .schedule {
+        height: 92%;
+        margin-top: 20px;
+        display: flex;
+        gap: 30px;
+        overflow: hidden;
+    }
+
+    .schedule-post {
+        width: 100%;
+    }
+
+    .schedule h3 {
+        margin-top: 100px;
+    }
+
+    /* AUDIENCE */
+    .audience {
+        height: 90%;
+        align-items: start;
+    }
+
+    .audience h2 {
+        text-align: left;
+    }
+
+    /* SOCIAL */
+    .social {
+        height: 98%;
+        overflow: hidden;
+    }
+
+    .time-post {
+        height: 100%;
+        width: 150%;
+    }
+
+    .social p {
+        text-align: left;
+    }
+}
