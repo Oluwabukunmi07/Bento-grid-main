@@ -380,4 +380,8 @@ span {
     .social p {
         text-align: left;
     }
+    
+    .attribution {
+        margin-top: auto;
+    }
 }
