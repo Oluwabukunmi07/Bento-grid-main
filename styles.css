@@ -190,7 +190,7 @@ span {
     width: 60%;
 }
 
-/* CREAT AND SCHEDULE CONTENT */
+/* CREATE AND SCHEDULE CONTENT */
 .schedule-content {
     grid-area: schedule-content;
     background: hsl(31, 66%, 93%);
@@ -276,8 +276,8 @@ span {
     
     /* SCHEDULE-CONTENT */
     .schedule-content {
-        height: 440px;
-        margin-bottom: 152px;
+        height: 70%;
+        margin-bottom: 168px;
     }   
 
     .schedule-content h3 {
@@ -291,9 +291,8 @@ span {
 
     /* CONTENT */
     .content {
-        height: 440px;
-        margin-top: -180px;
         gap: 2rem;
+        margin-top: -190px;
     }
 
     .content h2 {
